@@ -11,7 +11,7 @@ defmodule GitFetchWeb.GitRepoView do
       name: repo.name,
       description: repo.description,
       url: repo.url,
-      start_count: repo.start_count
+      star_count: repo.star_count
     }
   end
 end

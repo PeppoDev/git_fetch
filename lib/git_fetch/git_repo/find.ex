@@ -2,9 +2,6 @@ defmodule GitFetch.GitRepo.Find do
   alias GitFetch.Github.Client
 
   def by_username(username) do
-    # get repo infos from github api
-    # return repo infos mapped
-
     case Client.get_repo_info(username) do
       {:error, _reason} = error ->
         error
@@ -30,7 +27,7 @@ defmodule GitFetch.GitRepo.Find do
       name: name,
       description: description,
       url: html_url,
-      start_count: stargazers_count
+      star_count: stargazers_count
     }
   end
 end
